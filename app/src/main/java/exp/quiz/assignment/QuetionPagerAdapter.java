@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -42,10 +43,10 @@ public class QuetionPagerAdapter extends PagerAdapter {
         View itemView = mLayoutInflater.inflate(R.layout.qns_lyt, container, false);
 
         TextView quetion = itemView.findViewById(R.id.quetion);
-        TextView a = itemView.findViewById(R.id.a);
-        TextView b = itemView.findViewById(R.id.b);
-        TextView c = itemView.findViewById(R.id.c);
-        TextView d = itemView.findViewById(R.id.d);
+        RadioButton a = itemView.findViewById(R.id.a);
+        RadioButton b = itemView.findViewById(R.id.b);
+        RadioButton c = itemView.findViewById(R.id.c);
+        RadioButton d = itemView.findViewById(R.id.d);
         quetion.setText(qns_ans_list.get(position).quetion);
         a.setText(qns_ans_list.get(position).a);
         b.setText(qns_ans_list.get(position).b);
@@ -59,6 +60,6 @@ public class QuetionPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewPager) container).removeView((ImageView) object);
+        ((ViewPager) container).removeView((LinearLayout) object);
     }
 }
