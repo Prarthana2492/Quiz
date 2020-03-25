@@ -7,31 +7,54 @@
         android:id="@+id/quetion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
         android:text="qn" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="a"
-        android:id="@+id/a" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_1_layout"
+        android:layout_marginTop="15dp">
+
 
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="a"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/a" />
+
+
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/b" />
+
+
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="a"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/c" />
+
+
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="15dp"
         android:text="a"
+        android:layout_marginTop="5dp"
         android:id="@+id/d" />
 
 </RadioGroup>
