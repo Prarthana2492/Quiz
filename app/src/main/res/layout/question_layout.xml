@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:background="@drawable/border_1_layout"
+    >
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout1">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Your Score!"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18dp" />
+
+
+
+        <TextView
+            android:id="@+id/text_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+</LinearLayout>

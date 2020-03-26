@@ -2,9 +2,14 @@ package exp.quiz.assignment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,16 +59,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),"Out of"+qns_ans_list.size()+" You scored "+QuetionPagerAdapter.scoreMap.size(),Toast.LENGTH_LONG).show();
+                        final TextView text_desctxt;
+
+                        final Dialog dialog = new Dialog(MainActivity.this);
+                        dialog.setContentView(R.layout.question_layout);
+                        text_desctxt =  dialog.findViewById(R.id.text_desc);
+                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        dialog.setCancelable(true);
+
+                        text_desctxt.setText(QuetionPagerAdapter.scoreMap.size() + "  Out of  " + qns_ans_list.size());
+                            dialog.show();
+
+                    }
+
+
+
+                });
 
             }
-        });
 
-
-        //
-
-
-    }
     public void gettingdata(String data){
     try {
         JSONArray jsonArray=new JSONArray(data);
